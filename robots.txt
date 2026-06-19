@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scre11renkel.github.io/cn-web-i-game-com-cn-2/sitemap.xml

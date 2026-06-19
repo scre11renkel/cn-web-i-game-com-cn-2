@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 游戏信息与对照参考</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #fafbfc;
+      color: #1f2937;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.4rem 1.5rem 3.6rem;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.6rem;
+      border-bottom: 1px solid #e5e9f0;
+      padding-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+    .hero .sub {
+      font-size: 1rem;
+      color: #6b7280;
+      max-width: 600px;
+    }
+
+    /* sections */
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #1f2937;
+      border-left: 3px solid #d1d9e6;
+      padding-left: 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 1.2rem 0 0.4rem;
+      color: #1f2937;
+    }
+    p {
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1.2rem;
+    }
+    ul li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+    ul li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #9ca3af;
+      font-weight: 700;
+    }
+
+    /* 优势卡片（极简） */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #eef1f6;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      transition: box-shadow 0.15s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+    }
+    .feature-card strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .feature-card span {
+      color: #5f6b7a;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ 摘要项 */
+    .faq-item {
+      border-bottom: 1px solid #edf0f5;
+      padding: 0.8rem 0;
+    }
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #5f6b7a;
+      font-size: 0.9rem;
+    }
+
+    /* 底部 */
+    .footer-links {
+      margin-top: 3.2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+      color: #6b7280;
+      text-align: center;
+      line-height: 1.8;
+    }
+    .footer-links a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.1s;
+    }
+    .footer-links a:hover {
+      border-bottom-color: #9ca3af;
+    }
+    .inline-link {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid #d1d9e6;
+      transition: border-color 0.1s;
+    }
+    .inline-link:hover {
+      border-bottom-color: #6b7280;
+    }
+
+    /* 响应式 */
+    @media (min-width: 600px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1rem 2.8rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 信息对照 &amp; 延伸阅读</h1>
+    <div class="sub">日常查询、版本对照、社区观察 —— 围绕游戏数据与资料的轻量参考</div>
+  </div>
+
+  <!-- 优势区：两个维度 -->
+  <section>
+    <h2>为什么用 <a href="https://cn-web-i-game.com.cn" class="inline-link">爱游戏</a> 做对照</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <strong>条目化整理</strong>
+        <span>按标题、平台、发行时间梳理，方便快速定位差异点，减少反复切换页面。</span>
+      </div>
+      <div class="feature-card">
+        <strong>跨版本对照</strong>
+        <span>同一作品在不同语言区、重制版或移植版本的关键信息并排呈现，适合扫读。</span>
+      </div>
+      <div class="feature-card">
+        <strong>延伸入口</strong>
+        <span>每项条目附带外部参考来源或社区讨论索引，方便进一步查阅原始资料。</span>
+      </div>
+      <div class="feature-card">
+        <strong>极简干扰少</strong>
+        <span>无侧栏、无浮窗广告，页面重心保持在数据本身，阅读效率优先。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 说明区：从日常查询切入 -->
+  <section>
+    <h2>日常查询与延伸阅读场景</h2>
+    <p>不论是查阅某款游戏的准确发行日期、确认开发团队更名历史，还是对比不同平台的帧率与分辨率差异，<a href="https://cn-web-i-game.com.cn" class="inline-link">爱游戏</a> 的页面结构都围绕「先对照、再深入」设计。每个词条下方附带简注与相关条目链接，适合以下使用方式：</p>
+    <ul>
+      <li>快速确认一部作品的原始标题与本地化译名是否对应；</li>
+      <li>翻查同一系列不同世代的硬件参数、首发阵容；</li>
+      <li>从某一条目出发，顺着「相关作品」「开发团队」「版本沿革」延伸阅读。</li>
+    </ul>
+    <p>页面不预设读者已经了解背景，每个独立条目都保持适度自洽，同时为希望深入了解的用户留出外链空间。</p>
+  </section>
+
+  <!-- FAQ 摘要 (4组) -->
+  <section>
+    <h2>常见问题摘要</h2>
+    <div class="faq-item">
+      <div class="faq-q">◈ 如何确认自己看到的是最新版本信息？</div>
+      <div class="faq-a">每个条目顶部标注最近更新日期；重大版本更新或补丁日志会在条目下方附注，建议以官方公告为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">◈ 条目中的“延伸链接”指向哪里？</div>
+      <div class="faq-a">通常指向公开采访、商店页面、社区维基或开发者博客，均为非商业引用，便于核验原始出處。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">◈ 是否收录所有平台版本？</div>
+      <div class="faq-a">以主流平台（Windows、PlayStation、Xbox、Nintendo）及常见移动端版本为收录重点，极冷门平台或停服版本视资料完整度酌情收录。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">◈ 内容是否可转载或引用？</div>
+      <div class="faq-a">页面内的对照数据可自由引用，但建议同时核对官方来源；版面设计及撰稿框架保留所有权利。</div>
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <p>数据整理与对照参考 · 基于公开资料汇编</p>
+    <p>更多条目与更新详见 <a href="https://cn-web-i-game.com.cn">爱游戏</a></p>
+    <p style="margin-top:0.3rem; font-size:0.85rem; color:#9ca3af;">—— 日常查询 · 横向比较 · 延伸阅读 ——</p>
+  </div>
+
+</div>
+</body>
+</html>
