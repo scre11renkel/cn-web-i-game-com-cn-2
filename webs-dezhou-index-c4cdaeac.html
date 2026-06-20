@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>德州扑克游戏 · 稳定入口 · 玩法与场景指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(145deg, #fde9df 0%, #fad7c4 50%, #f2c8b0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+      color: #3b2a23;
+    }
+
+    .page {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* 顶部导航 —— 柔和圆润，与背景融合 */
+    nav.site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgba(255, 248, 242, 0.7);
+      backdrop-filter: blur(4px);
+      padding: 0.9rem 2rem;
+      border-radius: 56px;
+      margin-bottom: 3rem;
+      box-shadow: 0 6px 16px rgba(160, 100, 70, 0.12);
+    }
+
+    nav .logo {
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: #7f5340;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.95rem;
+    }
+
+    nav .nav-links a {
+      text-decoration: none;
+      color: #5a3e32;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav .nav-links a:hover {
+      background: #e2c1ae;
+      color: #2f1e19;
+    }
+
+    /* Hero 区 —— 简短导读 */
+    .hero {
+      text-align: center;
+      margin: 2rem 0 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #4a3025;
+    }
+
+    .hero .sub {
+      margin-top: 0.8rem;
+      font-size: 1.15rem;
+      color: #644f42;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 白色卡片区域 —— 用于核心介绍 + 场景模块 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .card {
+      background: #fffcf9;
+      border-radius: 36px;
+      padding: 2.2rem 2.6rem;
+      box-shadow: 0 12px 28px rgba(140, 90, 60, 0.10);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 14px 34px rgba(130, 80, 55, 0.12);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      font-weight: 350;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #edd9ce;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #4d3328;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 450;
+      margin: 1.2rem 0 0.3rem;
+      color: #5d3d2f;
+    }
+
+    .card p {
+      margin-bottom: 0.9rem;
+      color: #3f2f27;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 场景模块 —— 三张并排卡片在大屏 */
+    .scene-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin-top: 0.3rem;
+    }
+
+    .scene-item {
+      flex: 1 1 200px;
+      background: #fff8f3;
+      border-radius: 28px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 4px 12px rgba(130, 80, 50, 0.06);
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .scene-item:hover {
+      transform: translateY(-3px);
+      background: #fffdfb;
+    }
+
+    .scene-item h4 {
+      font-size: 1.2rem;
+      font-weight: 450;
+      color: #553b2d;
+      margin-bottom: 0.4rem;
+    }
+
+    .scene-item p {
+      font-size: 0.95rem;
+      color: #5f4a3d;
+    }
+
+    /* FAQ 摘要 / 常见说明 */
+    .faq-snip {
+      margin-top: 0.3rem;
+    }
+
+    .faq-snip details {
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid #edd9ce;
+      padding-bottom: 0.6rem;
+    }
+
+    .faq-snip summary {
+      font-weight: 460;
+      cursor: pointer;
+      color: #4f372b;
+      padding: 0.2rem 0;
+    }
+
+    .faq-snip summary:hover {
+      color: #7a5543;
+    }
+
+    .faq-snip .answer {
+      padding: 0.6rem 0.8rem 0.2rem;
+      color: #4e3c32;
+      font-size: 0.95rem;
+    }
+
+    /* 按钮感链接 */
+    .btn-link {
+      display: inline-block;
+      background: #e2c1ae;
+      color: #2f1e19;
+      padding: 0.45rem 1.8rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 450;
+      transition: background 0.2s, transform 0.1s;
+      border: 1px solid #dbb7a2;
+    }
+
+    .btn-link:hover {
+      background: #d4ad95;
+      transform: scale(1.01);
+    }
+
+    /* 内嵌句子中的链接样式（与 btn-link 区分） */
+    .inline-link {
+      color: #875f4b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 450;
+    }
+
+    .inline-link:hover {
+      color: #a26d53;
+      text-decoration-style: wavy;
+    }
+
+    /* 页脚 */
+    .page-foot {
+      margin-top: 3.8rem;
+      text-align: center;
+      color: #6f5648;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddcabc;
+      padding-top: 2rem;
+    }
+
+    .page-foot a {
+      color: #724f3b;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 700px) {
+      nav.site-nav {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1rem 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 1.8rem 1.5rem;
+      }
+
+      .scene-wrap {
+        flex-direction: column;
+      }
+
+      .btn-link {
+        padding: 0.4rem 1.4rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      nav .nav-links {
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 顶部导航 -->
+    <nav class="site-nav">
+      <span class="logo">♢ 稳定入口</span>
+      <div class="nav-links">
+        <a href="#intro">介绍</a>
+        <a href="#scenes">场景</a>
+        <a href="#faq">常见说明</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>德州扑克 · 清晰页面</h1>
+      <div class="sub">从稳定入口出发，了解规则、节奏与适用场景，每一步都有据可循。</div>
+    </div>
+
+    <!-- 卡片：核心介绍 + 三个场景模块 + 常见说明 -->
+    <div class="card-grid">
+      <!-- 核心介绍 及 特点 -->
+      <section class="card" id="intro">
+        <h2>关于这个页面</h2>
+        <p>这是一个围绕 <a href="https://webs-dezhou.com" class="inline-link">德州扑克游戏</a> 整理的导航式页面。没有浮夸的承诺，只希望为想了解或尝试这项活动的朋友，提供一个温和、可靠的信息起点。</p>
+        <p>这里的每段内容都经过梳理：从基础规则到常见疑问，从线上匹配到朋友聚会，尽量保持客观与流畅。如果你已经熟悉，也可以把它当作一个简洁的参考。</p>
+        <div style="margin: 1.2rem 0 0.4rem;">
+          <a href="https://webs-dezhou.com" class="btn-link">德州扑克游戏</a>
+        </div>
+        <p style="font-size: 0.95rem; color: #6a5244; margin-top: 0.6rem;">页面内所有指向同一地址的链接，均导向同一稳定入口。</p>
+      </section>
+
+      <!-- 三个场景模块 -->
+      <section class="card" id="scenes">
+        <h2>三个常见使用场景</h2>
+        <p style="margin-bottom: 1.2rem;">不同情境下，对规则的理解和界面需求会有些差异。以下是三种典型的场景——</p>
+        <div class="scene-wrap">
+          <div class="scene-item">
+            <h4>📋 规则学习阶段</h4>
+            <p>当你想系统了解牌型、下注轮次和位置概念时，一个内容结构清晰的页面能帮你逐步建立认知。建议配合实际牌例浏览。</p>
+          </div>
+          <div class="scene-item">
+            <h4>🕹️ 线上休闲对局</h4>
+            <p>适合节奏适中、界面不花哨的平台。可以随时查看牌桌动态，专注于读牌和决策过程。稳定入口意味着减少跳转干扰。</p>
+          </div>
+          <div class="scene-item">
+            <h4>♟️ 朋友线下聚会</h4>
+            <p>作为辅助参考，快速查阅规则或盲注结构。此时页面应当便于快速定位，而不需要大量动态特效。卡片式布局正好适用。</p>
+          </div>
+        </div>
+        <p style="margin-top: 1rem;">无论哪种场景，<a href="https://webs-dezhou.com" class="inline-link">德州扑克游戏</a> 都保持一致的引导方式。</p>
+      </section>
+
+      <!-- 常见说明 / FAQ 摘要 -->
+      <section class="card" id="faq">
+        <h2>一些常见说明</h2>
+        <div class="faq-snip">
+          <details>
+            <summary>这个页面适合完全没接触过规则的人吗？</summary>
+            <div class="answer">是的。内容不预设经验，从最基础的框架开始。同时提供清晰的延伸入口，方便进一步了解。</div>
+          </details>
+          <details>
+            <summary>为什么强调“稳定入口”？</summary>
+            <div class="answer">很多信息页面链接繁多，容易分心。这里尽量保持结构简洁，让每一次点击都有明确预期——就像一扇安静的门。</div>
+          </details>
+          <details>
+            <summary>关于玩法深度，这里会涉及吗？</summary>
+            <div class="answer">页面以导航和概览为主，不会堆叠复杂策略。但通过入口可以找到更多细节内容，由你自己决定探索的深度。</div>
+          </details>
+          <details>
+            <summary>是否推荐特定平台或工具？</summary>
+            <div class="answer">不推荐特定第三平台，仅介绍页面本身。选择哪个环境取决于个人习惯，这里只提供中立的说明与参考。</div>
+          </details>
+        </div>
+        <p style="margin-top: 1.2rem;">如果还有其他疑问，欢迎通过 <a href="https://webs-dezhou.com" class="inline-link">德州扑克游戏</a> 页面中的渠道进一步了解。</p>
+      </section>
+    </div>
+
+    <!-- 页脚部分 -->
+    <footer class="page-foot">
+      <p>内容方向：轻量导航 · 温和介绍 · 基于实际场景<br>
+      <span style="font-size: 0.85rem;">© 2025 · <a href="https://webs-dezhou.com">德州扑克游戏</a> · 信息页面</span></p>
+    </footer>
+  </div>
+</body>
+</html>
