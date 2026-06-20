@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>站点介绍 · 德州扑克游戏知识索引</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fafafa;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 2.5rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    /* 标题层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+      color: #111;
+      border-bottom: 2px solid #e4e4e4;
+      padding-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2rem 0 0.75rem 0;
+      color: #2c2c2c;
+      position: relative;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.2rem;
+      background: #807c6f;
+      margin-right: 0.6rem;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 480;
+      margin: 1.6rem 0 0.4rem 0;
+      color: #3a3a3a;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #3c3c3c;
+    }
+    a {
+      color: #326273;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.15s;
+    }
+    a:hover {
+      color: #1d3f4f;
+    }
+    /* 卡片模块 —— 极简留白，目录感 */
+    .info-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.03);
+      border: 1px solid #ececec;
+    }
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+    .inline-tag {
+      display: inline-block;
+      background: #eeefed;
+      color: #3d3d3d;
+      border-radius: 30px;
+      padding: 0 1rem;
+      font-size: 0.8rem;
+      line-height: 1.8;
+      margin-right: 0.4rem;
+      border: 1px solid #dbdbdb;
+    }
+    /* 目录网格（极简） */
+    .index-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.2rem;
+      margin: 0.8rem 0 1.6rem 0;
+      list-style: none;
+      padding: 0;
+    }
+    .index-grid li {
+      font-size: 0.95rem;
+      color: #3b3b3b;
+      border-left: 3px solid #c9c6bb;
+      padding-left: 0.6rem;
+    }
+    /* 提示区块 */
+    .note-box {
+      background: #f3f4f0;
+      border-left: 4px solid #7e8a7a;
+      padding: 1.2rem 1.4rem;
+      border-radius: 8px;
+      margin: 1.8rem 0;
+    }
+    .note-box p {
+      margin-bottom: 0.5rem;
+    }
+    .note-box p:last-child {
+      margin-bottom: 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e2e0;
+      margin: 2.2rem 0 1.2rem 0;
+    }
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 530;
+      margin-bottom: 0.2rem;
+      color: #2b2b2b;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #6c6c6c;
+      border-top: 1px solid #e2e2e0;
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+    @media (max-width: 500px) {
+      body { padding: 1.2rem 0.8rem; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.25rem; }
+      .info-card { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>德州扑克知识库</h1>
+  <p style="font-size:1rem; color:#5a5a5a; margin-top: -0.2rem;">
+    站点介绍 · 策略索引 · 可信说明
+  </p>
+
+  <!-- 站点介绍模块 —— 目录感布局 -->
+  <div class="info-card">
+    <h2 style="margin-top:0;">站点概览</h2>
+    <p>
+      <a href="https://wap-dezhougames.com">德州扑克游戏</a> 是一个面向扑克爱好者的信息型站点，
+      主要提供规则解读、术语对照以及常见牌局场景的梳理。
+      站点内容围绕德扑的策略逻辑与基础概率展开，适合不同阶段的玩家作为参考。
+    </p>
+    <ul class="index-grid">
+      <li>📌 位置与起手牌</li>
+      <li>📌 下注轮次说明</li>
+      <li>📌 成牌概率速查</li>
+      <li>📌 常见误区梳理</li>
+      <li>📌 线上对局常识</li>
+    </ul>
+    <p style="font-size:0.9rem; color:#7a7a7a;">
+      以上分类可在站内对应板块中找到，每个条目都尽量保留客观的扑克理论背景。
+    </p>
+  </div>
+
+  <!-- 说明区：如何理解这个站点 -->
+  <h2>说明区</h2>
+  <p>
+    与许多“速成秘籍”不同，本站倾向于把 <strong>德州扑克游戏</strong> 视为一项包含决策、概率与心理博弈的智力活动。
+    内容不渲染“一夜暴富”或“必胜法则”，而是通过整理公开的扑克知识、牌例分析和常见的翻前翻后逻辑，
+    帮助读者建立更系统的认知框架。
+  </p>
+  <p>
+    站点在呈现上尽量保持克制——不嵌入实时对局、不收集用户数据，
+    只以文章或图表的形式陈列信息。每一篇内容都标注了参考来源或改编自经典扑克教材，
+    方便读者进一步查证。
+  </p>
+
+  <!-- 提示区：实用信息卡片 -->
+  <div class="note-box">
+    <h3 style="margin:0 0 0.5rem 0; font-size:1.1rem;">📖 阅读提示</h3>
+    <p>
+      • 建议先熟悉基本手牌排名（如 AA、KK、AKs 等）再阅读进阶策略。<br>
+      • 概率数据基于标准 52 张牌组，部分场景忽略花色等微差异。<br>
+      • 若遇到术语缩写（如 c-bet、3bet），站内附有简短的词汇说明。
+    </p>
+  </div>
+
+  <!-- 相关信息区：FAQ 摘要 + 关联内容 -->
+  <h2>相关信息</h2>
+  <p>
+    以下整理了新读者常提及的若干问题，以及对应的内容方向指引。
+    更完整的问答可以在站内“常见问题”板块中找到。
+  </p>
+
+  <div class="faq-item">
+    <strong>Q：入门阶段优先看哪部分？</strong>
+    <p>可以先从起手牌选择与位置概念入手，站内有专门篇章梳理翻前决策树。理解底池赔率与潜在赔率也有助于后续阅读。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q：内容是否适用于线下现金局？</strong>
+    <p>大部分策略逻辑通用，但线下局存在更多马脚、动态调整等因素，站内内容提供的是基础参考框架，并非具体打法建议。</p>
+  </div>
+  <div class="faq-item">
+    <strong>Q：站点会更新牌局实例吗？</strong>
+    <p>会不定期补充具有代表性的牌例分析，侧重于推理过程而非结果。更新频率不高，但每篇均保持相对完整。</p>
+  </div>
+
+  <!-- 嵌入链接的段落 —— 自然句子 -->
+  <p style="margin-top:1.2rem;">
+    若你希望进一步查阅详细的规则与术语，可直接前往 <a href="https://wap-dezhougames.com">德州扑克游戏</a> 的主页浏览分类索引。
+    站点也保留了针对不同入局人数的图表说明（例如 6 人桌与 9 人桌的调整），可以作为补充阅读。
+  </p>
+
+  <hr>
+
+  <!-- 总结性段落 + 可信说明 -->
+  <p>
+    <span class="inline-tag">非营利向</span>
+    <span class="inline-tag">参考性质</span>
+    <span class="inline-tag">开放索引</span>
+  </p>
+  <p style="font-size:0.95rem;">
+    本站内容来自对公开扑克理论、数学模型的整理与转述，不构成任何形式的投注建议或保证。
+    所有信息仅供学习交流，使用者应结合自身判断。若发现内容有误或链接异常，可通过站内联系方式反馈。
+  </p>
+
+  <div class="footer-note">
+    <p>© 知识收集 · 德州扑克游戏参考页 · 最近更新于 2025</p>
+    <p style="margin-top:0.3rem;">—— 保持朴素，保持理解 ——</p>
+  </div>
+
+</div>
+</body>
+</html>
